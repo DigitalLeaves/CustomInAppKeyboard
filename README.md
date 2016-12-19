@@ -6,6 +6,6 @@ Whatever the reason, ever since iOS 8 introduced custom keyboards and apps like 
 
 In-App keyboards are those that are embedded and constrained to your application, but they are ready to use without any interaction other than opening the App. Custom iOS 8 keyboards extensions, on the other hand, work as general keyboards you can enable and use in the iOS device globally, but they are not well suited for scenarios like the one I described, because they need to be enabled from the Settings App in order to be available in your App, and of course you cannot restrict them to a limited set of fields.
 
-In this post, we will be talking about this scenario, where you need to implement a custom keyboard, just for your App, that will appear only in some fields or text areas that you specify, and no external configuration is needed, they work right away.
+This is the sample project for a post in my blog (https://digitalleaves.com/blog/), where we will be talking about this scenario, in which you need to implement a custom keyboard, just for your App, that will appear only in some fields or text areas that you specify, and no external configuration is needed, they work right away.
 
 ![In App Keyboard animated GIF](http://digitalleaves.com/blog/wp-content/uploads/2016/12/customKeyboardiPad.gif)
