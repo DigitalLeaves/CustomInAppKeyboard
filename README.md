@@ -8,4 +8,4 @@ In-App keyboards are those that are embedded and constrained to your application
 
 This is the sample project for a post in my blog (https://digitalleaves.com/blog/), where we will be talking about this scenario, in which you need to implement a custom keyboard, just for your App, that will appear only in some fields or text areas that you specify, and no external configuration is needed, they work right away.
 
-![In App Keyboard animated GIF](http://digitalleaves.com/blog/wp-content/uploads/2016/12/customKeyboardiPad.gif)
+![In App Keyboard animated GIF](http://digitalleaves.com/wp-content/uploads/2016/12/customKeyboardiPad.gif)
