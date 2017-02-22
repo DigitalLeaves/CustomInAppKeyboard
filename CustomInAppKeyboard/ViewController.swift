@@ -8,11 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, NumericKeyboardDelegate, UITextFieldDelegate {
+    // outlets
+    @IBOutlet weak var normalTextfield: UITextField!
+    @IBOutlet weak var customNumericTextfield: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customNumericTextfield.setAsNumericKeyboard(delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +28,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func numericKeyPressed(key: Int) {
+        print("Numeric key \(key) pressed!")
+    }
+    
+    func numericBackspacePressed() {
+        print("Backspace pressed!")
+    }
+    
+    func numericSymbolPressed(symbol: String) {
+        print("Symbol \(symbol) pressed!")
+    }
+    
+    // MARK: - UITextfieldDelegate: switch between textfields.
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField == normalTextfield {
+            customNumericTextfield.becomeFirstResponder()
+        } else if textField == customNumericTextfield {
+            normalTextfield.becomeFirstResponder()
+        }
+        
+        return false
+    }
 }
 

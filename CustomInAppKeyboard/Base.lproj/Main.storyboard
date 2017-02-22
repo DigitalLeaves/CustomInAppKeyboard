@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomInAppKeyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-AJ-hoL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom In-App keyboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIr-M6-eEL">
+                                <rect key="frame" x="35" y="97" width="306" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgH-Zz-p78">
+                                <rect key="frame" x="35" y="195" width="306" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a normal text textfield:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKN-Vt-cA1">
+                                <rect key="frame" x="35" y="166" width="306" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWh-gu-isN">
+                                <rect key="frame" x="35" y="262" width="306" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a custom numeric keyboard one:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQB-G3-vgu">
+                                <rect key="frame" x="35" y="233" width="306" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DKN-Vt-cA1" firstAttribute="trailing" secondItem="mIr-M6-eEL" secondAttribute="trailing" id="GqB-Gt-Vqp"/>
+                            <constraint firstItem="1GF-AJ-hoL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jbf-Z0-6WL"/>
+                            <constraint firstItem="tQB-G3-vgu" firstAttribute="leading" secondItem="pgH-Zz-p78" secondAttribute="leading" id="LC0-Tl-eIY"/>
+                            <constraint firstItem="eWh-gu-isN" firstAttribute="trailing" secondItem="tQB-G3-vgu" secondAttribute="trailing" id="SAL-0D-yEm"/>
+                            <constraint firstItem="pgH-Zz-p78" firstAttribute="trailing" secondItem="DKN-Vt-cA1" secondAttribute="trailing" id="TGD-qk-pfR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1GF-AJ-hoL" secondAttribute="bottom" id="VLW-HA-rDF"/>
+                            <constraint firstItem="1GF-AJ-hoL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d93-rf-2JF"/>
+                            <constraint firstItem="DKN-Vt-cA1" firstAttribute="leading" secondItem="mIr-M6-eEL" secondAttribute="leading" id="fOj-zt-Mrc"/>
+                            <constraint firstItem="pgH-Zz-p78" firstAttribute="top" secondItem="DKN-Vt-cA1" secondAttribute="bottom" constant="8" id="fca-FP-rUl"/>
+                            <constraint firstItem="pgH-Zz-p78" firstAttribute="leading" secondItem="DKN-Vt-cA1" secondAttribute="leading" id="gd3-rs-H4J"/>
+                            <constraint firstItem="eWh-gu-isN" firstAttribute="leading" secondItem="tQB-G3-vgu" secondAttribute="leading" id="k5i-cQ-j0o"/>
+                            <constraint firstItem="mIr-M6-eEL" firstAttribute="centerY" secondItem="1GF-AJ-hoL" secondAttribute="centerY" multiplier="1:3" id="qv5-Lp-m5I"/>
+                            <constraint firstItem="eWh-gu-isN" firstAttribute="top" secondItem="tQB-G3-vgu" secondAttribute="bottom" constant="8" id="sMt-Yd-3lF"/>
+                            <constraint firstItem="DKN-Vt-cA1" firstAttribute="top" secondItem="mIr-M6-eEL" secondAttribute="bottom" constant="40" id="u28-x4-eCk"/>
+                            <constraint firstItem="tQB-G3-vgu" firstAttribute="top" secondItem="pgH-Zz-p78" secondAttribute="bottom" constant="8" id="vm7-OC-gnS"/>
+                            <constraint firstItem="tQB-G3-vgu" firstAttribute="trailing" secondItem="pgH-Zz-p78" secondAttribute="trailing" id="x7Y-We-9OW"/>
+                            <constraint firstAttribute="trailing" secondItem="1GF-AJ-hoL" secondAttribute="trailing" id="xav-qR-Sri"/>
+                            <constraint firstItem="mIr-M6-eEL" firstAttribute="centerX" secondItem="1GF-AJ-hoL" secondAttribute="centerX" id="yWh-xZ-WY0"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="customNumericTextfield" destination="eWh-gu-isN" id="4Rl-xW-rf3"/>
+                        <outlet property="normalTextfield" destination="pgH-Zz-p78" id="dZ5-cV-JEx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="5616" height="3744"/>
+    </resources>
 </document>
